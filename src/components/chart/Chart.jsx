@@ -14,7 +14,7 @@ const Chart = () => {
   return (
     <div className="chart">
       <div className="title">Last 6 Months (Revenue)</div>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" aspect={2/1}>
         <AreaChart
           width={730}
           height={250}
@@ -32,9 +32,8 @@ const Chart = () => {
               <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
+          <CartesianGrid strokeDasharray="3 3" className="chartGrid"/>
+          <XAxis dataKey="name" stroke="gray"/>
           <Tooltip />
           <Area type="monotone" dataKey="Total" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
