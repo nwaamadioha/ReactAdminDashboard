@@ -5,11 +5,12 @@ import Single from "./pages/single/Single"
 import Login from "./pages/login/Login"
 import { userInputs, productInputs } from "./formSource"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import "./style/dark.scss"
 
 function App() {
 
   return (
-    <div>
+    <div className="app dark">
       <Router>
         <Routes>
           <Route path="/">
